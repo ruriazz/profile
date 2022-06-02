@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <sitemap>
-        <loc>https://ruriazz.pages.dev</loc>
-        <lastmod>2022-06-02T10:33:20+00:00</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://ruriazz.pages.dev/resume</loc>
-        <lastmod>2022-06-02T10:33:20+00:00</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://ruriazz.pages.dev/portfolio</loc>
-        <lastmod>2022-06-02T10:33:20+00:00</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://ruriazz.pages.dev/contact</loc>
-        <lastmod>2022-06-02T10:33:20+00:00</lastmod>
-    </sitemap>
-</sitemapindex>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ruriazz.pages.dev/</loc>
+    <lastmod>2022-06-02T10:33:20+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://ruriazz.pages.dev/resume</loc>
+    <lastmod>2022-06-02T10:33:20+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://ruriazz.pages.dev/portfolio</loc>
+    <lastmod>2022-06-02T10:33:20+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://ruriazz.pages.dev/contact</loc>
+    <lastmod>2022-06-02T10:33:20+00:00</lastmod>
+  </url>
+</urlset>
