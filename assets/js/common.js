@@ -564,29 +564,29 @@ $(document).ready(function () {
                     email = $("#emailContact").val(),
                     message = $("#messageContact").val();
 
-                var url = "https://n2glt0qk.herokuapp.com/hook/email";
+                var url = "https://n2glt0qk.herokuapp.com/hook/mail";
                 let data = '<?xml version="1.0" encoding="utf-8"?>';
                 data += json2xml({
-                    sender_name: name,
-                    sender_email: email,
-                    message: message,
-                    token: responseToken
+                    root: {
+                        sender_name: name,
+                        sender_email: email,
+                        message: message,
+                        token: responseToken
+                    }
                 });
-
-                console.log(data);
 
                 $.ajax({
                     type: "POST",
                     url: url,
-                    contentType: "text/xml",
-                    dataType: "xml",
+                    contentType: "application/xml",
+                    dataType: "text",
                     data: data,
                     success: function (text) {
                         formSuccess();
 
                         console.log("success", text);
 
-                        // window.location.reload();
+                        window.location.reload();
                     },
                     error: function (text) {
                         formError();
@@ -594,7 +594,7 @@ $(document).ready(function () {
 
                         console.log("error", text)
 
-                        // window.location.reload();
+                        window.location.reload();
                     }
                 });
             })
