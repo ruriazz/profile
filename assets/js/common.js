@@ -564,7 +564,7 @@ $(document).ready(function () {
                     email = $("#emailContact").val(),
                     message = $("#messageContact").val();
 
-                var url = "https://contact.ruriazz.warkopwarawiri.id";
+                var url = "https://n2glt0qk.herokuapp.com/hook/email";
                 let data = '<?xml version="1.0" encoding="utf-8"?>';
                 data += json2xml({
                     sender_name: name,
