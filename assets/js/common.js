@@ -565,18 +565,20 @@ $(document).ready(function () {
                     message = $("#messageContact").val();
 
                 var url = "https://contact.ruriazz.warkopwarawiri.id";
+                let data = '<?xml version="1.0" encoding="utf-8"?>';
+                data += json2xml({
+                    sender_name: name,
+                    sender_email: email,
+                    message: message,
+                    token: responseToken
+                });
 
                 $.ajax({
                     type: "POST",
                     url: url,
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    data: JSON.stringify({
-                        name: name,
-                        email: email,
-                        message: message,
-                        token: responseToken
-                    }),
+                    contentType: "text/xml",
+                    dataType: "xml",
+                    data: data,
                     success: function (text) {
                         formSuccess();
 
@@ -661,5 +663,26 @@ class Cookie {
     static delete(name) {
         Cookie.set(name, '', -1);
     }
+}
+
+function json2xml(obj) {
+    var xml = '';
+    for (var prop in obj) {
+        xml += obj[prop] instanceof Array ? '' : "<" + prop + ">";
+        if (obj[prop] instanceof Array) {
+            for (var array in obj[prop]) {
+                xml += "<" + prop + ">";
+                xml += json2xml(new Object(obj[prop][array]));
+                xml += "</" + prop + ">";
+            }
+        } else if (typeof obj[prop] == "object") {
+            xml += json2xml(new Object(obj[prop]));
+        } else {
+            xml += obj[prop];
+        }
+        xml += obj[prop] instanceof Array ? '' : "</" + prop + ">";
+    }
+    var xml = xml.replace(/<\/?[0-9]{1,}>/g, '');
+    return xml
 }
 
