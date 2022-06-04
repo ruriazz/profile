@@ -573,6 +573,8 @@ $(document).ready(function () {
                     token: responseToken
                 });
 
+                console.log(data);
+
                 $.ajax({
                     type: "POST",
                     url: url,
@@ -582,13 +584,17 @@ $(document).ready(function () {
                     success: function (text) {
                         formSuccess();
 
-                        window.location.reload();
+                        console.log("success", text);
+
+                        // window.location.reload();
                     },
                     error: function (text) {
                         formError();
                         submitMSG(false, text);
 
-                        window.location.reload();
+                        console.log("error", text)
+
+                        // window.location.reload();
                     }
                 });
             })
