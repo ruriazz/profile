@@ -6,7 +6,6 @@ Disallow:
 
 User-agent: *
 Allow: /
-Allow: /resume.html
-Allow: /portfolio.html
-Allow: /contact.html
-Disallow: /404.html
+Allow: /resume
+Allow: /portfolio
+Allow: /contact

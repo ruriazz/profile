@@ -1,0 +1,110 @@
+{% load static %}
+
+<div class="box shadow pb-0">
+	{% include "templates/menu.html" %}
+
+	<!-- About -->
+	<div class="pb-2">
+		<h1 class="title title--h1 first-title title__separate">Portfolio</h1>
+	</div>
+
+	<!-- Gallery -->
+	<div class="pb-0">
+		<!-- Filter -->
+		<div class="select">
+			<span class="placeholder">Select category</span>
+			<ul class="filter">
+				<li class="filter__item">Category</li>
+				<li class="filter__item active" data-filter="*"><a class="filter__link active" href="#filter">All</a>
+				</li>
+				<li class="filter__item" data-filter=".category-design"><a class="filter__link"
+						href="#filter">Mobile</a></li>
+				<li class="filter__item" data-filter=".category-concept"><a class="filter__link" href="#filter">Web</a>
+				</li>
+			</ul>
+			<input type="hidden" name="changemetoo" />
+		</div>
+
+		<!-- Content -->
+		<div class="gallery-grid js-masonry js-filter-container">
+			<div class="gutter-sizer"></div>
+
+			<figure class="gallery-grid__item category-design">
+				<div class="gallery-grid__image-wrap">
+					<img class="gallery-grid__image cover lazyload" src="{% static 'portfolio/smop.jpg' %}" data-zoom alt="" />
+				</div>
+				<figcaption class="gallery-grid__caption">
+					<h4 class="title gallery-grid__title">
+						<a href="//play.google.com/store/apps/details?id=id.co.togu.smartshopper"
+							target="_blank">SMOP!</a>
+					</h4>
+					<span class="gallery-grid__category">Mobile App</span>
+				</figcaption>
+			</figure>
+
+			<figure class="gallery-grid__item category-design">
+				<div class="gallery-grid__image-wrap">
+					<img class="gallery-grid__image cover lazyload" src="{% static 'portfolio/goodjob.jpg' %}" data-zoom
+						alt="" />
+				</div>
+				<figcaption class="gallery-grid__caption">
+					<h4 class="title gallery-grid__title">
+						<a href="//play.google.com/store/apps/details?id=id.co.togu.goodjob" target="_blank">GoodJob</a>
+					</h4>
+					<span class="gallery-grid__category">Mobile App</span>
+				</figcaption>
+			</figure>
+
+			<figure class="gallery-grid__item category-design">
+				<div class="gallery-grid__image-wrap">
+					<img class="gallery-grid__image cover lazyload" src="{% static 'portfolio/speakup.jpg' %}" data-zoom
+						alt="" />
+				</div>
+				<figcaption class="gallery-grid__caption">
+					<h4 class="title gallery-grid__title">
+						<a href="//play.google.com/store/apps/details?id=id.co.togu.speakup" target="_blank">SpeakUp</a>
+					</h4>
+					<span class="gallery-grid__category">Mobile App</span>
+				</figcaption>
+			</figure>
+
+			<figure class="gallery-grid__item category-design">
+				<div class="gallery-grid__image-wrap">
+					<img class="gallery-grid__image cover lazyload" src="{% static 'portfolio/mobin.jpg' %}" data-zoom alt="" />
+				</div>
+				<figcaption class="gallery-grid__caption">
+					<h4 class="title gallery-grid__title">
+						<a href="//play.google.com/store/apps/details?id=id.co.togu.mobin" target="_blank">Mobin</a>
+					</h4>
+					<span class="gallery-grid__category">Mobile App</span>
+				</figcaption>
+			</figure>
+
+			<figure class="gallery-grid__item category-concept">
+				<div class="gallery-grid__image-wrap">
+					<img class="gallery-grid__image cover lazyload" src="{% static 'portfolio/sisdabima.jpg' %}" data-zoom
+						alt="" />
+				</div>
+				<figcaption class="gallery-grid__caption">
+					<h4 class="title gallery-grid__title">
+						<a href="{% static 'portfolio/sisdabima-about.mp4" target="_blank">SISDABIMA</a>
+					</h4>
+					<span class="gallery-grid__category">Web App</span>
+				</figcaption>
+			</figure>
+
+			<figure class="gallery-grid__item category-concept">
+				<div class="gallery-grid__image-wrap">
+					<img class="gallery-grid__image cover lazyload" src="{% static 'portfolio/sunandar.jpg' %}" data-zoom
+						alt="" />
+				</div>
+				<figcaption class="gallery-grid__caption">
+					<h4 class="title gallery-grid__title">
+						<a href="http://tukang-gigi.rf.gd/" target="_blank">Klinik Sunandar</a>
+					</h4>
+					<span class="gallery-grid__category">Web</span>
+				</figcaption>
+			</figure>
+		</div>
+	</div>
+</div>

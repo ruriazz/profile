@@ -1,0 +1,51 @@
+{% load static %}
+<div class="box shadow pb-0">
+	{% include "templates/menu.html" %}
+
+	<div class="pb-0 pb-sm-2">
+		<h1 class="title title--h1 first-title title__separate">About Me</h1>
+		<p>I'm a Pull Stack Developer. I just pull things off the Internet and put it into my code.
+			Working in web and mobile apps
+			development. I enjoy turning complex problems into simple, beautiful and
+			intuitive designs.</p>
+		<p>My job is to build your website and mobile app so that it is functional and user-friendly
+			but at the
+			same time attractive. Moreover, I add personal touch to your product and make sure that
+			is eye-catching and easy to use. My aim is to bring across your message and identity in
+			the most creative way.</p>
+	</div>
+
+	<div class="box-inner pb-0">
+		<h2 class="title title--h3">What I'm Doing</h2>
+		<div class="row">
+
+			<div class="col-12 col-lg-6">
+				<div class="case-item box box__second">
+					<img class="case-item__icon" src="{% static 'icons/icon-dev.svg' %}" alt="" />
+					<div>
+						<h3 class="title title--h5 mt-2">Web Development</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-lg-6">
+				<div class="case-item box box__second">
+					<img class="case-item__icon" src="{% static 'icons/icon-dev.svg' %}" alt="" />
+					<div>
+						<h3 class="title title--h5 mt-2">RESTful API</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-lg-6">
+				<div class="case-item box box__second">
+					<img class="case-item__icon" src="{% static 'icons/icon-app.svg' %}" alt="" />
+					<div>
+						<h3 class="title title--h5 mt-2">Mobile Apps</h3>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
