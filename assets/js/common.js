@@ -546,83 +546,11 @@ $(document).ready(function () {
 
     $("#contact-form").validator().on("submit", function (event) {
         if (event.isDefaultPrevented()) {
-            formError();
             submitMSG(false, "Please fill in the form...");
         } else {
             event.preventDefault();
-            submitForm();
         }
     });
-
-    function submitForm() {
-        const submitBtn = $('.submit-btn');
-        const spinner = $('.btn-spinner');
-
-        submitBtn.fadeOut('fast', function () {
-            spinner.fadeIn(function () {
-                var name = $("#nameContact").val(),
-                    email = $("#emailContact").val(),
-                    message = $("#messageContact").val();
-
-                var url = "https://n2glt0qk.herokuapp.com/hook/mail";
-                let data = '<?xml version="1.0" encoding="utf-8"?>';
-                data += json2xml({
-                    root: {
-                        sender_name: name,
-                        sender_email: email,
-                        message: message,
-                        token: responseToken
-                    }
-                });
-
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    contentType: "application/xml",
-                    dataType: "text",
-                    data: data,
-                    success: function (text) {
-                        formSuccess();
-
-                        console.log("success", text);
-
-                        window.location.reload();
-                    },
-                    error: function (text) {
-                        formError();
-                        submitMSG(false, text);
-
-                        console.log("error", text)
-
-                        window.location.reload();
-                    }
-                });
-            })
-        })
-    }
-
-    function formSuccess() {
-        Cookie.set("submit-status", 'sent', 1);
-        $("#contact-form")[0].reset();
-        submitMSG(true, "Thanks! Your message has been sent.");
-    }
-
-    function formError() {
-        Cookie.set("submit-status", 'unsent', 1);
-        $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-            $(this).removeClass();
-        });
-    }
-
-    function submitMSG(valid, msg) {
-        var msgClasses;
-        if (valid) {
-            msgClasses = "validation-success";
-        } else {
-            msgClasses = "validation-danger";
-        }
-        $("#validator-contact").removeClass().addClass(msgClasses).text(msg);
-    }
 
     (function () {
         const status = Cookie.get("submit-status");
@@ -692,3 +620,93 @@ function json2xml(obj) {
     return xml
 }
 
+function recaptcha(val) {
+    responseToken = val;
+    $('#contact-form').submit();
+}
+
+function formSuccess() {
+    Cookie.set("submit-status", 'sent', 1);
+    $("#contact-form")[0].reset();
+    submitMSG(true, "Thanks! Your message has been sent.");
+}
+
+function formError() {
+    const submitStatus = $('#submit-status');
+    submitStatus.html(
+        `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Sorry!</strong> Your message could not be sent.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>`
+    );
+
+    $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        $(this).removeClass();
+    });
+}
+
+function submitMSG(valid, msg) {
+    var msgClasses;
+    if (valid) {
+        msgClasses = "validation-success";
+    } else {
+        msgClasses = "validation-danger";
+    }
+    $("#validator-contact").removeClass().addClass(msgClasses).text(msg);
+}
+
+function submitContact(el, e) {
+    e.preventDefault();
+    const submitBtn = $('.submit-btn');
+    const spinner = $('.btn-spinner');
+
+    if ($(el).attr('novalidate') == 'true') {
+        $(el).attr('novalidate', false);
+        return $(el).submit();
+    }
+
+    if (!$('[class*=has-error]').length) {
+        if (!$('#h-captcha').children().length) {
+            $('#h-captcha').fadeIn();
+            hcaptcha.render('h-captcha', { sitekey: 'f7beb523-681e-4b9c-84fe-bd72b9a584ae' });
+        }
+
+        if (typeof responseToken == 'string') {
+            $('#h-captcha').fadeOut('fast', function () {
+                submitBtn.fadeOut('fast', function () {
+                    spinner.fadeIn(function () {
+                        const data = {
+                            senderName: $("#nameContact").val(),
+                            senderEmail: $("#emailContact").val(),
+                            message: $("#messageContact").val(),
+                            responseToken: responseToken
+                        };
+
+                        const request = $.ajax({
+                            type: "POST",
+                            url: "/api/contact",
+                            data: JSON.stringify(data),
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                        });
+                        request.done(function (resp) {
+                            formSuccess();
+                            window.location.reload();
+                        });
+
+                        request.fail(function (resp) {
+                            formError();
+                            spinner.fadeOut(function () {
+                                responseToken = null;
+                                $('#h-captcha').html('');
+                                submitBtn.fadeIn();
+                            })
+                        })
+                    })
+                });
+            })
+        }
+    }
+}

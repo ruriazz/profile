@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://ruriazz.vercel.app/</loc>
-		<lastmod>2022-11-15T18:22:30.175Z</lastmod>
+		<loc>https://ruriazz.com/</loc>
+		<lastmod>2023-02-01T18:22:30.175Z</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>https://ruriazz.vercel.app/resume.html</loc>
-		<lastmod>2022-11-15T18:22:30.175Z</lastmod>
+		<loc>https://ruriazz.com/resume.html</loc>
+		<lastmod>2023-02-01T18:22:30.175Z</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>https://ruriazz.vercel.app/portfolio.html</loc>
-		<lastmod>2022-11-15T18:22:30.175Z</lastmod>
+		<loc>https://ruriazz.com/portfolio.html</loc>
+		<lastmod>2023-02-01T18:22:30.175Z</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>https://ruriazz.vercel.app/contact.html</loc>
-		<lastmod>2022-11-15T18:22:30.175Z</lastmod>
+		<loc>https://ruriazz.com/contact.html</loc>
+		<lastmod>2023-02-01T18:22:30.175Z</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
