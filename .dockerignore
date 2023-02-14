@@ -1,0 +1,4 @@
+.git/
+.gitignore
+container/
+!container/default.conf
