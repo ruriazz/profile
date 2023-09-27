@@ -1,9 +1,3 @@
-/*
- * Author: ArtStyles (ArtTemplate)
- * Template Name: vCard
- * Version: 1.0.3
-*/
-
 $(document).ready(function () {
 
     'use strict';
@@ -678,15 +672,15 @@ function submitContact(el, e) {
                 submitBtn.fadeOut('fast', function () {
                     spinner.fadeIn(function () {
                         const data = {
-                            senderName: $("#nameContact").val(),
-                            senderEmail: $("#emailContact").val(),
-                            message: $("#messageContact").val(),
-                            responseToken: responseToken
+                            sender_name: $("#nameContact").val(),
+                            sender_email: $("#emailContact").val(),
+                            message: $("#messageContact").val()
                         };
 
                         const request = $.ajax({
                             type: "POST",
-                            url: "/api/contact",
+                            url: "https://api.ruriazz.com/personal/contact",
+                            headers: { 'X-Submit-Token': responseToken },
                             data: JSON.stringify(data),
                             contentType: "application/json; charset=utf-8",
                             dataType: "json",

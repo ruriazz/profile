@@ -1,10 +1,4 @@
 /* ------------------------------------------------
- Author: ArtStyles (Art)
- 
- Template Name: vCard
- version: 1.1.0
------------------------------------------------- */
-/* ------------------------------------------------
 
  - General Styles
  - Background
@@ -29,7 +23,7 @@
  - Testimonials
  - Timeline
  - Other
- 
+
 ------------------------------------------------ */
 @import url(vendors/bootstrap.min.css);
 @import url(vendors/swiper.min.css);
