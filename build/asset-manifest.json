@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ef6ee535.css",
+    "main.js": "/static/js/main.fbdcd22f.js",
+    "static/js/453.3f566382.chunk.js": "/static/js/453.3f566382.chunk.js",
+    "static/media/noice-img.png": "/static/media/noice-img.5b3dfa4894f329855a2f.png",
+    "static/media/loader.gif": "/static/media/loader.afb079aea153f95b5494.gif",
+    "static/media/go.png": "/static/media/go.f98107310b38a5a10edc.png",
+    "static/media/javascript.png": "/static/media/javascript.bc636f5a213c79e932d0.png",
+    "static/media/profile.jpg": "/static/media/profile.d11ff09c64ab6fab40de.jpg",
+    "static/media/Aziz Ruri Suparman.pdf": "/static/media/Aziz Ruri Suparman.077a08ed22e4dde90a4f.pdf",
+    "static/media/django.png": "/static/media/django.4475f2241a026f94832f.png",
+    "static/media/docker.png": "/static/media/docker.15d58ff9ac2747160818.png",
+    "static/media/gallery-img2.jpg": "/static/media/gallery-img2.22e290d2666c6be7855c.jpg",
+    "static/media/python.png": "/static/media/python.2091b8b0a7c15713e22d.png",
+    "static/media/github.svg": "/static/media/github.91b1f08d3d486476bbb231190c713c0a.svg",
+    "static/media/instagram.svg": "/static/media/instagram.59f666b839307b80525cb462e946e453.svg",
+    "index.html": "/index.html",
+    "static/media/plan.svg": "/static/media/plan.f299d8d8b4fe93d7ce3943fe0aca87dc.svg",
+    "static/media/cloud-gear-automation.svg": "/static/media/cloud-gear-automation.15637b73938d0cdbc7a9e50b0e4086cf.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.a56f5cc15a72a150a8ae9574f4ff8fe0.svg",
+    "static/media/facebook.svg": "/static/media/facebook.ff5c7445817889f15e4a252d93bb7427.svg",
+    "static/media/database.svg": "/static/media/database.92eef4e4064923e4d56ca6068f34da47.svg",
+    "static/media/contact-svg.svg": "/static/media/contact-svg.625301ef380353d710dba2149846eb80.svg",
+    "static/media/customize-computer.svg": "/static/media/customize-computer.056b3f54b47ecfda7928fb70614ca1ca.svg",
+    "static/media/resume-svg.svg": "/static/media/resume-svg.317fa1a00d328e719a2184d1dff15340.svg",
+    "static/media/check-mark.svg": "/static/media/check-mark.5157effa44e06a251f02.svg",
+    "static/media/about-svg.svg": "/static/media/about-svg.2be91f5bab29da7b521fbc7601ca1e7b.svg",
+    "static/media/services-svg.svg": "/static/media/services-svg.a29f17ec967069db3719232a0aece34d.svg",
+    "main.ef6ee535.css.map": "/static/css/main.ef6ee535.css.map",
+    "main.fbdcd22f.js.map": "/static/js/main.fbdcd22f.js.map",
+    "453.3f566382.chunk.js.map": "/static/js/453.3f566382.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef6ee535.css",
+    "static/js/main.fbdcd22f.js"
+  ]
+}
