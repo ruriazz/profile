@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.ef6ee535.css",
-    "main.js": "/static/js/main.fbdcd22f.js",
+    "main.js": "/static/js/main.fe5eb4fc.js",
     "static/js/453.3f566382.chunk.js": "/static/js/453.3f566382.chunk.js",
     "static/media/noice-img.png": "/static/media/noice-img.5b3dfa4894f329855a2f.png",
     "static/media/loader.gif": "/static/media/loader.afb079aea153f95b5494.gif",
     "static/media/go.png": "/static/media/go.f98107310b38a5a10edc.png",
     "static/media/javascript.png": "/static/media/javascript.bc636f5a213c79e932d0.png",
     "static/media/profile.jpg": "/static/media/profile.d11ff09c64ab6fab40de.jpg",
-    "static/media/Aziz Ruri Suparman.pdf": "/static/media/Aziz Ruri Suparman.077a08ed22e4dde90a4f.pdf",
+    "static/media/Aziz Ruri Suparman.pdf": "/static/media/Aziz Ruri Suparman.989801466f67e8c25722.pdf",
     "static/media/django.png": "/static/media/django.4475f2241a026f94832f.png",
     "static/media/docker.png": "/static/media/docker.15d58ff9ac2747160818.png",
     "static/media/gallery-img2.jpg": "/static/media/gallery-img2.22e290d2666c6be7855c.jpg",
@@ -28,11 +28,11 @@
     "static/media/about-svg.svg": "/static/media/about-svg.2be91f5bab29da7b521fbc7601ca1e7b.svg",
     "static/media/services-svg.svg": "/static/media/services-svg.a29f17ec967069db3719232a0aece34d.svg",
     "main.ef6ee535.css.map": "/static/css/main.ef6ee535.css.map",
-    "main.fbdcd22f.js.map": "/static/js/main.fbdcd22f.js.map",
+    "main.fe5eb4fc.js.map": "/static/js/main.fe5eb4fc.js.map",
     "453.3f566382.chunk.js.map": "/static/js/453.3f566382.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ef6ee535.css",
-    "static/js/main.fbdcd22f.js"
+    "static/js/main.fe5eb4fc.js"
   ]
 }
