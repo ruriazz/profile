@@ -1,0 +1,21 @@
+{
+  "name": "Aziz Ruri Suparman",
+  "short_name": "ruriazz",
+  "description": "Backend-focused Software Engineer with 5+ years building scalable systems for fintech and marketplace platforms.",
+  "start_url": ".",
+  "icons": [
+      {
+          "src": "/icons/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "/icons/android-chrome-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+  ],
+  "theme_color": "#0a0a0c",
+  "background_color": "#0a0a0c",
+  "display": "standalone"
+}
